@@ -1,7 +1,12 @@
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Store;
+using Store.Новая_папка;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 var app = builder.Build();
 
