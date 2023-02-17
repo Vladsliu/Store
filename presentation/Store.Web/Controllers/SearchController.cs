@@ -6,7 +6,7 @@ namespace Store.Web.Controllers
     public class SearchController : Controller
     {
         private readonly BookService bookService;
-        public SearchController(BookService bookservice)
+        public SearchController(BookService bookService)
         {
             this.bookService = bookService;
         }
