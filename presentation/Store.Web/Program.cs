@@ -16,6 +16,7 @@ builder.Services.AddSession(options =>
     });
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddTransient<BookService>();
+builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
 
 var app = builder.Build();
 
